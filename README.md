@@ -1,6 +1,7 @@
 # React Blog
 
 ## Technologies Used
+
 - React.js
 
 ## The App
@@ -11,3 +12,7 @@
 
 ![image](https://github.com/younnes-chebli/react-blog/assets/106768273/75ad8e7c-3bf4-4f7c-b3fe-13978c1a862f)
 
+## Misc
+
+- To run json-server without installing the dependency:
+  `npx json-server -p 3500 -w data/db.json`
