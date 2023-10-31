@@ -58,7 +58,6 @@ function App() {
     const datetime = format(new Date(), 'MMMM dd, yyyy pp')
     const newPost = { id, title: postTitle, datetime, body: postBody }
     const allPosts = [...posts, newPost]
-    console.log(allPosts);
     setPosts(allPosts)
     setPostTitle('')
     setPostBody('')
