@@ -26,7 +26,7 @@ const PostPage = ({ posts, handleDelete }) => {
           <>
             <h2>Post Not Found</h2>
             <p>
-              <Link to='/'>Back To HomePage</Link>
+              <Link to='/'>Back To Homepage</Link>
             </p>
           </>}
       </article>

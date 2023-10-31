@@ -41,7 +41,7 @@ body {
 .Header,
 .Footer {
   width: 100%;
-  background-color: #66d8f5;
+  background-color: mediumpurple;
   padding: 1rem;
   display: flex;
   justify-content: space-between;
@@ -218,7 +218,7 @@ body {
   border-radius: 0.25rem;
   padding: 0.5rem;
   font-size: 1rem;
-  background-color: red;
+  background-color: blueviolet;
   color: #fff;
   cursor: pointer;
 }

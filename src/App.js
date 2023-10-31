@@ -38,11 +38,19 @@ function App() {
     }
   ])
 
+  const navigate = useNavigate()
   const [search, setSearch] = useState('')
   const [searchResults, setSearchResults] = useState([])
   const [postTitle, setPostTitle] = useState('')
   const [postBody, setPostBody] = useState('')
-  const navigate = useNavigate()
+
+  useEffect(() => {
+    const filteredPosts = posts.filter(post =>
+      post.title.toLowerCase().includes(search.toLowerCase())
+      || post.body.toLowerCase().includes(search.toLowerCase())
+    )
+    setSearchResults(filteredPosts.reverse())
+  }, [posts, search])
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -68,7 +76,7 @@ function App() {
       <Header title='React JS Blog' />
       <Nav search={search} setSearch={setSearch} />
       <Routes>
-        <Route exact path='/' element={<Home posts={posts} />} />
+        <Route exact path='/' element={<Home posts={searchResults} />} />
         <Route exact path='/post' element={
           <NewPost
             handleSubmit={handleSubmit}
